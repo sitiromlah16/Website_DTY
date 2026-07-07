@@ -1,0 +1,40 @@
+/* Typography normalization for consistent sizing across homepage */
+.lead{
+    font-size:1.05rem;
+    color:#475569;
+}
+
+.section-subtitle{
+    font-size:1rem;
+}
+
+.card{
+    font-size:0.98rem;
+}
+
+.card h5,
+.card .card-title{
+    font-size:1.05rem;
+    font-weight:700;
+}
+
+.card .card-text,
+.card p,
+.card .list-unstyled li{
+    font-size:0.98rem;
+    color:#475569;
+    line-height:1.6;
+}
+
+.list-unstyled li{
+    margin-bottom:0.5rem;
+}
+
+.navbar-brand{font-size:1.05rem}
+.nav-link{font-size:0.95rem}
+.footer-text{font-size:0.95rem}
+
+@media (max-width:767px){
+    .lead{font-size:1rem}
+    .card{font-size:0.96rem}
+}

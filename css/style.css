@@ -1,0 +1,918 @@
+body{
+    margin: 0;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+    background:#f5f7fb;
+}
+
+.navbar {
+    background-color: #0f2f45 !important;
+    padding: 0.7rem 0 !important;
+    min-height: 64px;
+}
+
+.navbar .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: 0.95rem !important;
+    line-height: 1.2 !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.navbar-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 0 !important;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.55rem 0.95rem !important;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    white-space: nowrap !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    background:#f8f9fa;
+    padding:100px 0 !important;
+    margin-top: 0;
+}
+
+.hero-banner{
+    position:relative;
+    background: linear-gradient(135deg, rgba(15, 47, 69, 0.5), rgba(15, 47, 69, 0.5)), url('../img/vocational_tainer.jpeg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    padding:100px 0;
+    transition:transform .45s ease;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:#0A2647;
+}
+
+.hero p{
+    color:#334155;
+    font-size:1.05rem;
+}
+
+.hero .btn-primary{
+    background:#0A2647;
+    border-color:#0A2647;
+    padding:10px 18px;
+    font-weight:600;
+}
+
+.hero-image-wrapper{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(10,38,71,0.08);
+}
+
+.hero-img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+}
+
+/* overlay for better text contrast on narrower screens */
+.hero-image-wrapper::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,0.0),rgba(0,0,0,0.12));
+    pointer-events:none;
+}
+
+/* New homepage hero banner */
+.hero-banner{
+    position:relative;
+    background: linear-gradient(135deg, rgba(15, 47, 69, 0.5), rgba(15, 47, 69, 0.5)), url('../img/vocational_tainer.jpeg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    padding:120px 0;
+    transition:transform .45s ease;
+}
+
+.hero-banner:hover{
+    transform:scale(1.01);
+}
+
+.hero-banner .overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(10,38,71,0.45), rgba(10,38,71,0.25));
+}
+
+.hero-inner{
+    position:relative;
+    z-index:2;
+    padding:60px 15px;
+    animation:fadeInUp .9s ease both;
+}
+
+.hero-inner h1{
+    font-size:3rem;
+    color:#fff;
+    text-shadow:0 14px 30px rgba(0,0,0,0.25);
+}
+
+.hero-inner p{
+    color:#e2e8f0;
+    font-size:1.05rem;
+}
+
+.hero-inner .btn{
+    min-width:160px;
+}
+
+.hero-inner .btn-primary{
+    background:#0A2647;
+    border-color:#0A2647;
+    padding:12px 22px;
+    font-weight:600;
+}
+
+.section-header{
+    margin-bottom:3rem;
+}
+
+.section-title{
+    font-size:2.4rem;
+    font-weight:700;
+    line-height:1.05;
+}
+
+.section-subtitle{
+    color:#64748b;
+    max-width:720px;
+    margin-top:1rem;
+    margin-bottom:0;
+    font-size:1rem;
+}
+
+.scroll-indicator{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    margin-top:42px;
+    opacity:.9;
+    animation:bounce 1.8s infinite;
+}
+
+.scroll-indicator span{
+    color:#dbeafe;
+    letter-spacing:.18em;
+    font-size:.82rem;
+}
+
+.scroll-indicator .arrow{
+    width:14px;
+    height:14px;
+    border-bottom:2px solid #dbeafe;
+    border-right:2px solid #dbeafe;
+    transform:rotate(45deg);
+}
+
+.feature,
+.stat-card,
+.card{
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.feature:hover,
+.stat-card:hover,
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(10,38,71,0.12);
+}
+
+.feature{background:white;border-radius:12px;box-shadow:0 6px 18px rgba(10,38,71,0.06);padding:30px 24px;}
+
+.bg-light .card img{height:200px;object-fit:cover}
+
+.card-body{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.card-title{
+    font-weight:700;
+}
+
+.btn-outline-primary{
+    border-color:rgba(10,38,71,.9);
+    color:rgba(10,38,71,.9);
+}
+
+.btn-outline-primary:hover{
+    background:rgba(10,38,71,.05);
+}
+
+.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.feature,
+.stat-card,
+.card{
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.feature:hover,
+.stat-card:hover,
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(10,38,71,0.12);
+}
+
+.feature{background:white;border-radius:12px;box-shadow:0 6px 18px rgba(10,38,71,0.06);padding:30px 24px;}
+
+@media (max-width:767px){
+    .hero-banner{min-height:56vh}
+    .hero-inner h1{font-size:1.8rem}
+    .scroll-indicator{margin-top:28px}
+}
+
+#backToTop{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    border-radius:50%;
+    width:48px;
+    height:48px;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 16px 36px rgba(10,38,71,0.18);
+    z-index:1000;
+}
+
+footer{
+    background:#0A2647;
+    color:white;
+    text-align:center;
+    padding:24px 12px;
+}
+
+footer .footer-bottom {
+    padding-top: 1.5rem;
+}
+
+footer .footer-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+    margin: 1.75rem 0;
+}
+
+.social-links {
+    display: inline-flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.18);
+}
+
+img{
+    border-radius:10px;
+}
+
+/* Navbar tweaks */
+.navbar-brand{letter-spacing:0.4px;color:#fff}
+.nav-link{margin-left:8px}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #0a1f2e 0%, #1a3f5a 50%, #0f2f45 100%);
+    color: white;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Decorative background elements (disabled) */
+footer::before {
+    display: none !important;
+    height: 0 !important;
+    content: none !important;
+}
+
+footer::after {
+    display: none !important;
+    height: 0 !important;
+    content: none !important;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.footer-section {
+    animation: fadeInUp 0.6s ease both;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.footer-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.footer-section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.footer-section:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.footer-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: 0.8px;
+    position: relative;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #0a66ff, #00d4ff);
+    border-radius: 2px;
+}
+
+.footer-text {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a::before {
+    content: '▸';
+    position: relative;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-size: 1.2rem;
+    color: #00d4ff;
+}
+
+.footer-links a:hover {
+    color: #00d4ff;
+    padding-left: 8px;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.footer-link {
+    color: #0a66ff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 3px solid #00d4ff;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-left-color: #0a66ff;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info strong {
+    color: #00d4ff;
+    font-weight: 700;
+}
+
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(10, 102, 255, 0.3), transparent);
+    margin: 40px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bottom {
+    padding-top: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-links {
+
+/* Stronger override to force navbar to use footer gradient (over Bootstrap) */
+nav.navbar.navbar-dark.bg-primary,
+.navbar.bg-primary,
+.navbar.navbar-dark {
+    background-image: none !important;
+    background-color: transparent !important;
+    background: linear-gradient(135deg, #0a1f2e 0%, #1a3f5a 50%, #0f2f45 100%) !important;
+}
+
+/* Replace toggler icon with white SVG to ensure visibility */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat;
+}
+
+
+/* Ensure Bootstrap's .bg-primary uses the footer gradient */
+.bg-primary {
+    background: linear-gradient(135deg, #0a1f2e 0%, #1a3f5a 50%, #0f2f45 100%) !important;
+    background-color: unset !important;
+}
+
+/* Navbar-specific overrides to ensure full consistency */
+nav.navbar, .navbar.bg-primary, .navbar-dark.bg-primary {
+    background: linear-gradient(135deg, #0a1f2e 0%, #1a3f5a 50%, #0f2f45 100%) !important;
+}
+
+/* Make toggler icon and links visible on dark background */
+.navbar-toggler-icon {
+    filter: invert(1) grayscale(1) contrast(100%);
+}
+.navbar .nav-link,
+.navbar .navbar-brand{
+    color:#ffffff !important;
+}
+
+
+/* Make navbar/header match footer gradient */
+.navbar, nav.navbar, .navbar-dark.bg-primary {
+    background: linear-gradient(135deg, #0a1f2e 0%, #1a3f5a 50%, #0f2f45 100%) !important;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #ffffff !important;
+}
+.navbar .navbar-toggler {
+    border-color: rgba(255,255,255,0.12);
+}
+
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(10, 102, 255, 0.2), rgba(0, 212, 255, 0.1));
+    border: 2px solid rgba(10, 102, 255, 0.4);
+    border-radius: 50%;
+    color: #0a66ff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: #0a66ff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.35s ease, height 0.35s ease;
+    z-index: -1;
+}
+
+.social-icon:hover {
+    color: white;
+    border-color: #0a66ff;
+    box-shadow: 0 8px 24px rgba(10, 102, 255, 0.5);
+    transform: translateY(-6px) scale(1.05);
+}
+
+.social-icon:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 50px 0 24px;
+        margin-top: 60px;
+    }
+
+    footer .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+    }
+
+    .footer-title::after {
+        width: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Membuat kelas warna biru custom agar konsisten */
+.bg-dty-blue {
+    background-color: #0f2f45 !important; /* Warna biru navy yang Anda pakai */
+    color: #ffffff !important;
+}
+
+.card{
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.badge{
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    padding:0;
+    line-height:24px;
+}
+
+.icon-circle{
+
+width:65px;
+height:65px;
+
+border-radius:50%;
+
+background:#1d4ed8;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+color:white;
+
+}
+
+
+
+.title-line{
+
+width:45px;
+
+height:4px;
+
+background:#2563eb;
+
+border-radius:10px;
+
+margin-top:8px;
+
+}
+
+
+
+.produk-box{
+
+
+background:white;
+
+padding:18px;
+
+border-radius:16px;
+
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+font-weight:500;
+
+transition:0.3s;
+
+}
+
+
+
+.produk-box:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+.info-card{
+
+
+padding:35px;
+
+border-radius:20px;
+
+background:white;
+
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+
+height:100%;
+
+}
+
+
+.navbar{
+    padding: 12px 0;
+}
+
+.navbar-brand{
+    font-size: 1.8rem;
+}
+
+.nav-link{
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-link:hover{
+    color:#27c5ff !important;
+}
+
+.nav-link.active{
+    color:#27c5ff !important;
+}
+
+.navbar{
+    padding:12px 0;
+}
+
+.navbar-brand{
+    font-size:1.7rem;
+    font-weight:700;
+}
+
+.navbar-nav{
+    gap:12px;
+}
+
+.nav-link{
+    color:#ffffff !important;
+    font-size:15px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#27c5ff !important;
+}
+
+.nav-link.active{
+    color:#27c5ff !important;
+    font-weight:600;
+}
+
+.navbar{
+    padding:12px 0;
+}
+
+.navbar-brand{
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+.nav-link{
+
+    color:white !important;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    padding:8px 12px !important;
+
+    transition:0.3s;
+
+}
+
+
+.nav-link:hover{
+
+    color:#27c5ff !important;
+
+}
+
+
+.nav-link.active{
+
+    color:#27c5ff !important;
+
+    font-weight:600;
+
+}
+
+.navbar-brand{
+    font-size:1.5rem;
+}
+
+.nav-link{
+    font-size:15px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#8ecbff !important;
+}
+
+.nav-link.active{
+    color:#8ecbff !important;
+}
+
+.nav-link{
+    font-size:15px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#8ecbff !important;
+}
+
+.nav-link.active{
+    color:#8ecbff !important;
+}
+
+.navbar-brand{
+    font-size:1.45rem;
+}
+
+.navbar{
+    padding: 14px 0;
+}
+
+.navbar-brand{
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+}
+
+.navbar-nav .nav-link{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: white !important;
+    margin-left: 12px;
+    transition: .3s;
+}
+
+.navbar-nav .nav-link:hover{
+    color: #4da3ff !important;
+}
+
+.navbar-nav .nav-link.active{
+    color: #4da3ff !important;
+}
