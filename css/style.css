@@ -143,6 +143,9 @@ body{
     z-index:2;
     padding:60px 15px;
     animation:fadeInUp .9s ease both;
+    will-change: transform, opacity;
+    transform: translateY(0);
+    transition: opacity .25s ease;
 }
 
 .hero-inner h1{
@@ -193,6 +196,7 @@ body{
     margin-top:42px;
     opacity:.9;
     animation:bounce 1.8s infinite;
+    cursor:pointer;
 }
 
 .scroll-indicator span{
